@@ -130,3 +130,19 @@ const MyModel = mongoose.model('ModelName');
 const MyModel = mongoose.model('ModelName', mySchema);
 
 ```
+
+### Express Handlebars
+
+```javascript
+// import
+const exphbs  = require('express-handlebars');
+
+// set view engine
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+
+// render
+app.get('/', function (req, res) {
+    res.render('home');
+});
+```
